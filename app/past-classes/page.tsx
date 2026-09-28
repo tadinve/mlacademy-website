@@ -1,6 +1,26 @@
 import Link from "next/link";
 
-const pastClasses = [
+type PastClass = {
+  id: string;
+  classNumber: string;
+  title: string;
+  date: string;
+  duration: string;
+  attendees: number;
+  description: string;
+  topics: string[];
+  hasPresentation: boolean;
+  hasNotebook: boolean;
+  hasQuiz: boolean;
+  hasVideo: boolean;
+  status: "completed";
+  presentationLink: string;
+  notebookLink: string;
+  homeworkLink?: string;
+  videoLink?: string;
+};
+
+const pastClasses: PastClass[] = [
   {
     id: "sept-20-2025",
     classNumber: "Class 0",
@@ -8,7 +28,7 @@ const pastClasses = [
     date: "September 20, 2025",
     duration: "2 hours 15 mins",
     attendees: 32,
-    description: "Welcome to our first class! Today we covered the fundamentals of AI agents and introduced the core concepts that will guide us through the next 12 weeks.",
+    description: "Welcome to our first class. This session introduces the fundamentals of AI agents and links to the supporting class materials.",
     topics: [
       "What are AI agents and why they matter",
       "Fundamental agent architectures", 
@@ -17,8 +37,8 @@ const pastClasses = [
     ],
     hasPresentation: true,
     hasNotebook: true,
-    hasQuiz: true,
-    hasVideo: true,
+    hasQuiz: false,
+    hasVideo: false,
     status: "completed",
     presentationLink: "/classes/sept-20-2025", // Internal class page
     notebookLink: "/classes/sept-20-2025"
@@ -30,7 +50,7 @@ const pastClasses = [
     date: "September 22, 2025",
     duration: "~2 hours",
     attendees: 0,
-    description: "Day 1 dives into prompt chaining: why single prompts fail, how to build robust chains, and hands-on use cases. Includes slides, Colab notebook, quiz, and recording.",
+    description: "Day 1 dives into prompt chaining: why single prompts fail, how to build robust chains, and how to work through the examples with slides, notebooks, and homework.",
     topics: [
       "Why single prompts fail for complex tasks",
       "Building robust prompt chains",
@@ -39,13 +59,12 @@ const pastClasses = [
     ],
     hasPresentation: true,
     hasNotebook: true,
-    hasQuiz: true,
-    hasVideo: true,
+    hasQuiz: false,
+    hasVideo: false,
     status: "completed",
     presentationLink: "https://docs.google.com/presentation/d/1V1RHVM1X_6W5VregAgxXJxjCNV32m9HWiuer1E-Io5U/edit?usp=drive_link",
     notebookLink: "https://colab.research.google.com/drive/1_KL-hzucqPDgqTaYexRQyyHHCC71tskZ",
-    homeworkLink: "https://colab.research.google.com/drive/1Yliia9XFS3uOxkgwdcMPfybt8e10gUCt",
-    videoLink: "https://www.youtube.com/embed/4FY3_pjdZ0g"
+    homeworkLink: "https://colab.research.google.com/drive/1Yliia9XFS3uOxkgwdcMPfybt8e10gUCt"
   },
   {
     id: "sept-24-2025",
@@ -54,7 +73,7 @@ const pastClasses = [
     date: "September 24, 2025",
     duration: "~2 hours",
     attendees: 0,
-    description: "Day 2 explores branching logic in agentic design: how to create workflows that adapt and make decisions. Includes slides, Colab notebook, quiz, and recording.",
+    description: "Day 2 explores branching logic in agentic design: how to create workflows that adapt and make decisions using the published slides and notebook.",
     topics: [
       "What is branching in agentic workflows?",
       "When and why to use decision paths",
@@ -66,7 +85,7 @@ const pastClasses = [
     ],
     hasPresentation: true,
     hasNotebook: true,
-    hasQuiz: true,
+    hasQuiz: false,
     hasVideo: false,
     status: "completed",
     presentationLink: "https://docs.google.com/presentation/d/1CyCjGHC_v5r6feu841Ars7zJxriJaHQJfTLLeNpgKBY/edit?usp=drive_link",
@@ -76,39 +95,41 @@ const pastClasses = [
 
 export default function PastClasses() {
   const completedClasses = pastClasses.filter(cls => cls.status === "completed");
+  const classesWithAttendance = completedClasses.filter((cls) => cls.attendees > 0);
 
   return (
     <main>
       <div className="mb-8">
         <h1 className="text-4xl font-semibold mb-4">Past Class Recordings</h1>
         <p className="text-lg text-[var(--muted)] mb-6">
-          Access recordings, materials, and resources from all completed classes. Each class includes presentation slides, 
-          interactive notebooks, quizzes, and full video recordings with dedicated discussion sections.
+          Access the published recordings, slides, notebooks, and supporting materials from completed classes.
         </p>
         
         <div className="flex items-center gap-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
           <div className="text-2xl">📚</div>
           <div>
-            <h3 className="font-semibold text-blue-900">Complete Learning Materials</h3>
+            <h3 className="font-semibold text-blue-900">Available Class Materials</h3>
             <p className="text-blue-800 text-sm">
-              Each class includes slides, Jupyter notebooks, knowledge quizzes, and full recordings with individual comment sections.
+              Resource availability varies by class. Use each card below to see what is published for that session.
             </p>
           </div>
         </div>
       </div>
 
       {/* Statistics */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className={`grid gap-4 mb-8 ${classesWithAttendance.length > 0 ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3"}`}>
         <div className="card text-center">
           <div className="text-2xl font-bold text-[var(--accent)]">{completedClasses.length}</div>
           <div className="text-sm text-[var(--muted)]">Classes Completed</div>
         </div>
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-[var(--accent)]">
-            {completedClasses.reduce((total, cls) => total + cls.attendees, 0)}
+        {classesWithAttendance.length > 0 && (
+          <div className="card text-center">
+            <div className="text-2xl font-bold text-[var(--accent)]">
+              {classesWithAttendance.reduce((total, cls) => total + cls.attendees, 0)}
+            </div>
+            <div className="text-sm text-[var(--muted)]">Documented Attendees</div>
           </div>
-          <div className="text-sm text-[var(--muted)]">Total Attendees</div>
-        </div>
+        )}
         <div className="card text-center">
           <div className="text-2xl font-bold text-[var(--accent)]">
             {completedClasses.filter(cls => cls.hasVideo).length}
@@ -156,10 +177,23 @@ export default function PastClasses() {
                   <div className="flex flex-wrap gap-4 text-sm text-[var(--muted)] mb-3">
                     <span>📅 {classItem.date}</span>
                     <span>⏱️ {classItem.duration}</span>
-                    <span>👥 {classItem.attendees} attendees</span>
+                    {classItem.attendees > 0 && <span>👥 {classItem.attendees} attendees</span>}
                   </div>
                   
                   <p className="text-[var(--muted)] mb-4">{classItem.description}</p>
+
+                  <p className="text-sm text-[var(--muted)] mb-4">
+                    Available now:{" "}
+                    {[
+                      classItem.hasPresentation ? "slides" : null,
+                      classItem.hasNotebook ? "notebook" : null,
+                      classItem.homeworkLink ? "homework" : null,
+                      classItem.hasVideo && classItem.videoLink ? "recording" : null,
+                    ]
+                      .filter(Boolean)
+                      .join(", ")}
+                    .
+                  </p>
                   
                   {/* Topics Covered */}
                   <div className="mb-4">
@@ -206,9 +240,9 @@ export default function PastClasses() {
                         🏠 Homework
                       </a>
                     )}
-                    {classItem.hasQuiz && (
-                      <span className="inline-flex items-center px-2 py-1 bg-purple-100 text-purple-800 rounded text-xs">
-                        📝 Quiz
+                    {classItem.hasVideo && classItem.videoLink && (
+                      <span className="inline-flex items-center px-2 py-1 bg-red-100 text-red-800 rounded text-xs">
+                        🎥 Recording
                       </span>
                     )}
                   </div>

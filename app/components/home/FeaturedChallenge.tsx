@@ -93,9 +93,14 @@ export function FeaturedChallenge() {
   };
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+    <div className={submitted ? "grid gap-8 lg:grid-cols-[1.1fr_0.9fr]" : "max-w-4xl"}>
       <div className="rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-6 md:p-8">
         <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-200">Scenario</p>
+        {!submitted && (
+          <p className="mt-4 text-sm leading-7 text-slate-300 md:text-base">
+            An agent is ready to place an order. A manager must approve it first. Where would you enforce that rule?
+          </p>
+        )}
         <p className="mt-4 text-lg leading-8 text-slate-100">
           A procurement agent has prepared a $12,400 purchase order. Company policy requires manager approval
           for orders over $10,000. The agent can call an ERP submission tool. Which design best ensures the
@@ -158,52 +163,38 @@ export function FeaturedChallenge() {
         </div>
       </div>
 
-      <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 md:p-8">
-        <h3 className="text-2xl font-semibold text-white">Why this matters</h3>
-        <p className="mt-4 text-sm leading-7 text-slate-300 md:text-base">
-          This question tests where approval must be enforced. Helpful instructions, agent reviews, and UI changes
-          can guide behavior, but they do not replace authorization checks in the trusted service that performs the
-          side effect.
-        </p>
+      {submitted && (
+        <div className="rounded-[1.5rem] border border-white/10 bg-white/5 p-6 md:p-8">
+          <h3 className="text-2xl font-semibold text-white">Result and explanations</h3>
 
-        {submitted ? (
           <div
             className={`mt-6 rounded-2xl border p-5 ${isCorrect ? 'border-emerald-400/45 bg-emerald-500/10' : 'border-amber-300/35 bg-amber-500/10'}`}
             aria-live="polite"
           >
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-200">Feedback</p>
             <h4 className="mt-3 text-xl font-semibold text-white">
-              {isCorrect ? 'Correct: enforce authorization at the trusted submission boundary.' : 'Not quite: the service boundary has to enforce the rule.'}
+              {isCorrect ? 'Correct: enforce authorization at the trusted submission boundary.' : 'Not quite: enforce the rule where the side effect is actually allowed or blocked.'}
             </h4>
             <p className="mt-3 text-sm leading-7 text-slate-200 md:text-base">
               {selectedOption?.explanation}
             </p>
           </div>
-        ) : (
-          <div className="mt-6 rounded-2xl border border-dashed border-white/12 bg-slate-950/30 p-5">
-            <p className="text-sm leading-7 text-slate-300 md:text-base">
-              Submit an answer to reveal detailed explanations for every option. Your selection stays locked until
-              you reset the challenge so the feedback remains consistent.
-            </p>
-          </div>
-        )}
 
-        <div className="mt-6 space-y-4">
-          {options.map((option) => (
-            <div key={option.id} className="rounded-2xl border border-white/8 bg-slate-950/30 p-4">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-sm font-semibold text-sky-200">
-                  {option.id}
-                </span>
-                <p className="text-sm font-semibold text-white md:text-base">{option.title}</p>
+          <div className="mt-6 space-y-4">
+            {options.map((option) => (
+              <div key={option.id} className="rounded-2xl border border-white/8 bg-slate-950/30 p-4">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-800 text-sm font-semibold text-sky-200">
+                    {option.id}
+                  </span>
+                  <p className="text-sm font-semibold text-white md:text-base">{option.title}</p>
+                </div>
+                <p className="mt-3 text-sm leading-7 text-slate-300 md:text-base">{option.explanation}</p>
               </div>
-              <p className="mt-3 text-sm leading-7 text-slate-300 md:text-base">
-                {submitted ? option.explanation : 'Explanation appears after you submit your answer.'}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

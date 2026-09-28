@@ -42,12 +42,6 @@ export const metadata: Metadata = {
   },
 };
 
-const practiceBullets = [
-  "Work through architecture tradeoffs before they become production incidents.",
-  "Study how authorization, tool safety, and system boundaries affect real agent behavior.",
-  "Use public resources, sample materials, and class archives to keep practicing.",
-];
-
 const instructorHighlights = [
   "Strategic AI consultant with a long track record in data and enterprise systems.",
   "Teaches through practical scenarios focused on design, debugging, security, and deployment.",
@@ -57,7 +51,7 @@ const instructorHighlights = [
 export default function Home() {
   return (
     <main className="pb-20 pt-8 md:pt-12">
-      <section className="mb-8 grid gap-8 overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(13,25,47,0.96),rgba(10,16,31,0.92))] p-8 shadow-[0_24px_80px_rgba(0,0,0,0.35)] lg:grid-cols-[1.05fr_0.95fr] lg:p-12">
+      <section className="mb-8 grid gap-6 overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(13,25,47,0.96),rgba(10,16,31,0.92))] p-8 shadow-[0_24px_80px_rgba(0,0,0,0.35)] lg:grid-cols-[1.15fr_0.85fr] lg:p-10">
         <div className="relative z-10 max-w-2xl">
           <p className="mb-4 inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-100">
             Agentic Architect Lab by MLacademy
@@ -83,37 +77,17 @@ export default function Home() {
               Explore learning resources
             </a>
           </div>
-          <ul className="mt-10 grid gap-3 text-sm text-slate-300 md:grid-cols-3 md:text-base">
-            {practiceBullets.map((bullet) => (
-              <li
-                key={bullet}
-                className="rounded-2xl border border-white/8 bg-white/5 px-4 py-4 leading-7 backdrop-blur"
-              >
-                {bullet}
-              </li>
-            ))}
-          </ul>
         </div>
 
-        <div className="relative flex min-h-[300px] items-end overflow-hidden rounded-[1.75rem] border border-white/10 bg-slate-950/40">
-          <Image
-            src="/images/banners/growtika-nGoCBxiaRO0-unsplash.jpg"
-            alt="Abstract network illustration"
-            fill
-            className="object-cover opacity-70"
-            sizes="(max-width: 1024px) 100vw, 40vw"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-tr from-[#07101d] via-[#07101d]/65 to-sky-500/10" />
-          <div className="relative z-10 m-6 max-w-md rounded-2xl border border-sky-300/15 bg-slate-950/70 p-6 backdrop-blur">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-200">
-              Practical focus
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold text-white">Start with a system boundary that matters.</h2>
-            <p className="mt-3 text-sm leading-7 text-slate-300">
-              The featured challenge centers on one of the most common production mistakes in agentic systems:
-              trusting prompts or the interface instead of enforcing critical rules at the service boundary.
-            </p>
+        <div className="rounded-[1.75rem] border border-white/10 bg-slate-950/45 p-6 shadow-[0_16px_48px_rgba(0,0,0,0.28)] lg:self-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-200">Challenge preview</p>
+          <p className="mt-4 text-lg font-medium leading-8 text-white">
+            An agent is ready to place an order. A manager must approve it first. Where would you enforce that rule?
+          </p>
+          <div className="mt-6 space-y-3 text-sm text-slate-300">
+            <div className="rounded-xl border border-white/8 bg-white/5 px-4 py-3">Review the scenario.</div>
+            <div className="rounded-xl border border-white/8 bg-white/5 px-4 py-3">Choose the strongest design.</div>
+            <div className="rounded-xl border border-white/8 bg-white/5 px-4 py-3">Reveal the explanation after you submit.</div>
           </div>
         </div>
       </section>
@@ -128,8 +102,7 @@ export default function Home() {
             Where should approval actually be enforced?
           </h2>
           <p className="mt-4 text-base leading-8 text-slate-300 md:text-lg">
-            This local interaction demonstrates the architecture decision. It does not implement a real procurement
-            system, and it runs entirely in the browser with no backend or model API.
+            Try this free architecture challenge. No sign-up required.
           </p>
         </div>
         <FeaturedChallenge />
@@ -168,8 +141,7 @@ export default function Home() {
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200">Featured resources</p>
           <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Public materials you can use right now.</h2>
           <p className="mt-4 text-base leading-8 text-slate-300 md:text-lg">
-            These are the free resources surfaced on the homepage today. Each destination was chosen to avoid unfinished
-            pattern stubs and broken placeholder pages.
+            Explore articles, course materials, and class recordings to put these ideas into practice.
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">
