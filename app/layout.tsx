@@ -5,8 +5,9 @@ import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Agentic Design Patterns",
-  description: "A hands-on guide to building intelligent systems.",
+  title: "MLacademy",
+  description: "Practical resources for designing, debugging, securing, and deploying AI agents.",
+  metadataBase: new URL("https://mlacademy.io"),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

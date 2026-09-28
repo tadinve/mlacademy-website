@@ -15,9 +15,9 @@ export default function AgenticDesignPatterns() {
         <div className="mt-4 md:mt-0 md:ml-6 flex-shrink-0">
           <Link 
             className="btn !bg-green-600 hover:!bg-green-700 !text-white font-semibold px-6 py-3 text-lg inline-flex items-center gap-2"
-            href="/schedule"
+            href="/past-classes"
           >
-            🚀 Register Now
+            Explore Class Materials
           </Link>
         </div>
       </div>
@@ -50,31 +50,29 @@ export default function AgenticDesignPatterns() {
         </div>
       </div>
 
-      {/* Registration Section */}
+      {/* Guided Learning Section */}
       <div className="card mt-6 bg-gradient-to-r from-[var(--accent)]/10 to-[var(--accent)]/5 border-[var(--accent)]/30">
         <div className="text-center">
-          <h2 className="text-2xl font-semibold mb-3 text-[var(--accent)]">Ready to Start Your AI Agent Journey?</h2>
+          <h2 className="text-2xl font-semibold mb-3 text-[var(--accent)]">Ready to Go Deeper into Agentic Design?</h2>
           <p className="text-[var(--muted)] mb-4 max-w-2xl mx-auto">
-            Join our comprehensive 12-week course and learn to build production-ready AI agents from industry experts. 
-            Limited seats available!
+            Use the course overview, public materials, and past class archive to study the architecture patterns behind reliable agentic systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Link 
               className="btn !bg-green-600 hover:!bg-green-700 !text-white font-semibold px-8 py-3 text-lg"
-              href="/schedule"
+              href="/past-classes"
             >
-              🚀 Register Now →
+              Browse Past Classes →
             </Link>
-            <Link 
+            <a 
               className="btn bg-transparent border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white px-6 py-3"
-              href="/schedule"
+              href="/Introduction.pdf"
+              target="_blank"
+              rel="noreferrer"
             >
-              📅 View Schedule
-            </Link>
+              Open Intro PDF
+            </a>
           </div>
-          <p className="text-sm text-[var(--muted)] mt-4">
-            🗓️ Starts Sept 20, 2025 • ⏰ 12 weeks • 🎓 Expert instruction
-          </p>
         </div>
       </div>
 
