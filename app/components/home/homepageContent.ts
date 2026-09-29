@@ -96,7 +96,7 @@ export const featuredResources: FeaturedResource[] = [
   {
     title: "Past Class Archive",
     description:
-      "A public archive page for completed classes, notebooks, recordings, and materials already available on the site.",
+      "A public archive page for completed classes, slides, notebooks, homework, and other materials already published on the site.",
     outcome: "Find reusable class material from completed sessions in one place.",
     format: "Archive",
     level: "Mixed",

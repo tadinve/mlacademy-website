@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { practiceChallenges } from '../lib/practiceChallenges';
 
 const routes = [
   '/',
@@ -11,7 +12,9 @@ const routes = [
   '/courses/model-context-protocol',
   '/courses/natural-language-processing',
   '/courses/slm-finetuning',
+  '/practice',
   '/past-classes',
+  ...practiceChallenges.map((challenge) => `/practice/${challenge.slug}`),
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

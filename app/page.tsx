@@ -9,6 +9,7 @@ import {
   guidedLearningLinks,
   learningPaths,
 } from "./components/home/homepageContent";
+import { getPracticeChallengeBySlug } from "../lib/practiceChallenges";
 
 export const metadata: Metadata = {
   title: "Agentic Architect Lab by MLacademy",
@@ -49,6 +50,12 @@ const instructorHighlights = [
 ];
 
 export default function Home() {
+  const featuredPracticeChallenge = getPracticeChallengeBySlug('purchase-order-approval');
+
+  if (!featuredPracticeChallenge) {
+    throw new Error('Missing featured practice challenge content.');
+  }
+
   return (
     <main className="pb-20 pt-8 md:pt-12">
       <section className="mb-8 grid gap-6 overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(13,25,47,0.96),rgba(10,16,31,0.92))] p-8 shadow-[0_24px_80px_rgba(0,0,0,0.35)] lg:grid-cols-[1.15fr_0.85fr] lg:p-10">
@@ -82,7 +89,7 @@ export default function Home() {
         <div className="rounded-[1.75rem] border border-white/10 bg-slate-950/45 p-6 shadow-[0_16px_48px_rgba(0,0,0,0.28)] lg:self-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-200">Challenge preview</p>
           <p className="mt-4 text-lg font-medium leading-8 text-white">
-            An agent is ready to place an order. A manager must approve it first. Where would you enforce that rule?
+            {featuredPracticeChallenge.prompt}
           </p>
           <div className="mt-6 space-y-3 text-sm text-slate-300">
             <div className="rounded-xl border border-white/8 bg-white/5 px-4 py-3">Review the scenario.</div>
@@ -106,6 +113,15 @@ export default function Home() {
           </p>
         </div>
         <FeaturedChallenge />
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <TrackedResourceLink
+            href="/practice"
+            eventLabel="featured_challenge_explore_all"
+            className="inline-flex items-center justify-center rounded-xl border border-slate-600 px-5 py-3 text-sm font-semibold text-slate-100 transition-colors hover:border-sky-300 hover:text-sky-100"
+          >
+            Explore all challenges
+          </TrackedResourceLink>
+        </div>
       </section>
 
       <section id="learning-paths" className="scroll-mt-32 mt-20">
@@ -141,7 +157,7 @@ export default function Home() {
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200">Featured resources</p>
           <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Public materials you can use right now.</h2>
           <p className="mt-4 text-base leading-8 text-slate-300 md:text-lg">
-            Explore articles, course materials, and class recordings to put these ideas into practice.
+            Explore articles, course materials, and published class materials to put these ideas into practice.
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">

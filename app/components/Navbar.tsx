@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: '/#featured-challenge', label: 'Practice' },
+    { href: '/practice', label: 'Practice' },
     { href: '/#learning-paths', label: 'Learn' },
     { href: '/courses', label: 'Courses' },
     { href: '/about', label: 'About' },

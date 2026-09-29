@@ -96,13 +96,17 @@ const pastClasses: PastClass[] = [
 export default function PastClasses() {
   const completedClasses = pastClasses.filter(cls => cls.status === "completed");
   const classesWithAttendance = completedClasses.filter((cls) => cls.attendees > 0);
+  const classesWithVideo = completedClasses.filter((cls) => cls.hasVideo);
+  const statsCount = 2 + (classesWithAttendance.length > 0 ? 1 : 0) + (classesWithVideo.length > 0 ? 1 : 0);
+  const statsGridClass =
+    statsCount === 4 ? "grid-cols-2 md:grid-cols-4" : statsCount === 3 ? "grid-cols-2 md:grid-cols-3" : "grid-cols-2";
 
   return (
     <main>
       <div className="mb-8">
-        <h1 className="text-4xl font-semibold mb-4">Past Class Recordings</h1>
+        <h1 className="text-4xl font-semibold mb-4">Past Classes &amp; Materials</h1>
         <p className="text-lg text-[var(--muted)] mb-6">
-          Access the published recordings, slides, notebooks, and supporting materials from completed classes.
+          Access the published slides, notebooks, homework, and supporting materials from completed classes.
         </p>
         
         <div className="flex items-center gap-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
@@ -117,7 +121,7 @@ export default function PastClasses() {
       </div>
 
       {/* Statistics */}
-      <div className={`grid gap-4 mb-8 ${classesWithAttendance.length > 0 ? "grid-cols-2 md:grid-cols-4" : "grid-cols-2 md:grid-cols-3"}`}>
+      <div className={`grid gap-4 mb-8 ${statsGridClass}`}>
         <div className="card text-center">
           <div className="text-2xl font-bold text-[var(--accent)]">{completedClasses.length}</div>
           <div className="text-sm text-[var(--muted)]">Classes Completed</div>
@@ -130,12 +134,12 @@ export default function PastClasses() {
             <div className="text-sm text-[var(--muted)]">Documented Attendees</div>
           </div>
         )}
-        <div className="card text-center">
-          <div className="text-2xl font-bold text-[var(--accent)]">
-            {completedClasses.filter(cls => cls.hasVideo).length}
+        {classesWithVideo.length > 0 && (
+          <div className="card text-center">
+            <div className="text-2xl font-bold text-[var(--accent)]">{classesWithVideo.length}</div>
+            <div className="text-sm text-[var(--muted)]">Video Recordings</div>
           </div>
-          <div className="text-sm text-[var(--muted)]">Video Recordings</div>
-        </div>
+        )}
         <div className="card text-center">
           <div className="text-2xl font-bold text-[var(--accent)]">
             {completedClasses.filter(cls => cls.hasNotebook).length}
@@ -151,7 +155,7 @@ export default function PastClasses() {
             <div className="text-4xl mb-4">🎓</div>
             <h3 className="text-xl font-semibold mb-2">No Classes Yet</h3>
             <p className="text-[var(--muted)] mb-4">
-              Past class recordings will appear here once classes have been completed.
+                Published class materials will appear here once classes have been completed.
             </p>
             <Link href="/courses/agentic-design-patterns" className="btn">
               View Course Details
