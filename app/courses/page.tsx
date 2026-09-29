@@ -43,7 +43,7 @@ export default function Courses() {
           </p>
           
           <div className="mb-4">
-            <h3 className="font-semibold mb-2">What's Included:</h3>
+            <h3 className="font-semibold mb-2">What&apos;s Included:</h3>
             <ul className="text-sm text-[var(--muted)] space-y-1">
               <li>• 12 weeks of structured learning</li>
               <li>• Interactive lectures and live Q&A sessions</li>
@@ -61,7 +61,7 @@ export default function Courses() {
               rel="noopener noreferrer"
               className="text-[var(--accent)] hover:underline"
             >
-              "Agentic Design Patterns: Hands-On with Intelligent Systems"
+              &quot;Agentic Design Patterns: Hands-On with Intelligent Systems&quot;
             </a>
             {" "}by Antonio Gullí
           </p>
@@ -104,7 +104,7 @@ export default function Courses() {
           </p>
           
           <div className="mb-4">
-            <h3 className="font-semibold mb-2">What You'll Learn:</h3>
+            <h3 className="font-semibold mb-2">What You&apos;ll Learn:</h3>
             <ul className="text-sm text-[var(--muted)] space-y-1">
               <li>• Plan and code all the parts of an LLM</li>
               <li>• Prepare datasets suitable for LLM training</li>
@@ -122,7 +122,7 @@ export default function Courses() {
               rel="noopener noreferrer"
               className="text-[var(--accent)] hover:underline"
             >
-              "Build a Large Language Model (From Scratch)"
+              &quot;Build a Large Language Model (From Scratch)&quot;
             </a>
             {" "}by Sebastian Raschka
           </p>
@@ -204,7 +204,7 @@ export default function Courses() {
           </p>
           
           <div className="mb-4">
-            <h3 className="font-semibold mb-2">What You'll Learn:</h3>
+            <h3 className="font-semibold mb-2">What You&apos;ll Learn:</h3>
             <ul className="text-sm text-[var(--muted)] space-y-1">
               <li>• Text preprocessing and tokenization</li>
               <li>• Transformer architectures and attention</li>
@@ -234,11 +234,11 @@ export default function Courses() {
             <span className="inline-block bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Intermediate Level</span>
           </div>
           <p className="mb-4 text-[var(--muted)]">
-            Learn to build powerful AI applications using Anthropic's Model Context Protocol. Master server creation, tool integration, and seamless AI workflows.
+            Learn to build powerful AI applications using Anthropic&apos;s Model Context Protocol. Master server creation, tool integration, and seamless AI workflows.
           </p>
           
           <div className="mb-4">
-            <h3 className="font-semibold mb-2">What You'll Learn:</h3>
+            <h3 className="font-semibold mb-2">What You&apos;ll Learn:</h3>
             <ul className="text-sm text-[var(--muted)] space-y-1">
               <li>• MCP architecture and protocol fundamentals</li>
               <li>• Building MCP servers and clients</li>
@@ -272,7 +272,7 @@ export default function Courses() {
           </p>
           
           <div className="mb-4">
-            <h3 className="font-semibold mb-2">What You'll Learn:</h3>
+            <h3 className="font-semibold mb-2">What You&apos;ll Learn:</h3>
             <ul className="text-sm text-[var(--muted)] space-y-1">
               <li>• Small language model architectures</li>
               <li>• Parameter-efficient fine-tuning (PEFT)</li>

@@ -71,7 +71,7 @@ export default function Class24Sept2025() {
         {activeTab === "overview" && (
           <div className="space-y-6">
             <div className="card">
-              <h2 className="text-2xl font-semibold mb-4">Today's Learning Objectives</h2>
+              <h2 className="text-2xl font-semibold mb-4">Today&apos;s Learning Objectives</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-[var(--accent)]">Core Concepts</h3>

@@ -25,7 +25,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold mb-3 text-[var(--accent)]">Venkatesh Tadinada - Chief Instructor</h3>
                 <div className="text-[var(--muted)] space-y-4">
                   <p>
-                    Venkatesh Tadinada is passionate about data, driven by Edward Deming's philosophy: "In God we trust, all others bring data." 
+                    Venkatesh Tadinada is passionate about data, driven by Edward Deming&apos;s philosophy: &quot;In God we trust, all others bring data.&quot;
                     For 25 years, he has been at the forefront of data innovation with Fortune 100 companies.
                   </p>
                   <p>
@@ -72,7 +72,7 @@ export default function About() {
                   <p>
                     His leadership experience includes serving as technical VP of a startup, leading SW/HW teams that developed 
                     world-class products generating over $20 million in new sales. From 10GE transport systems to fleet management 
-                    solutions, Peeya's diverse background in both hardware and software engineering provides unique insights for 
+                    solutions, Peeya&apos;s diverse background in both hardware and software engineering provides unique insights for 
                     our AI and machine learning curriculum.
                   </p>
                 </div>

@@ -42,7 +42,7 @@ export default function BuildLLMFromScratch() {
         <div className="space-y-8">
           <section className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-semibold text-gray-900 mb-6">
-              What You'll Learn
+              What You&apos;ll Learn
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -140,7 +140,7 @@ export default function BuildLLMFromScratch() {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 underline"
                 >
-                  "Build a Large Language Model (From Scratch)"
+                  &quot;Build a Large Language Model (From Scratch)&quot;
                 </a>
                 {" "}by Sebastian Raschka
               </p>

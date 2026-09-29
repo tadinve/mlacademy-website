@@ -39,7 +39,7 @@ export default function ModelContextProtocol() {
         <div className="space-y-8">
           <section className="bg-white rounded-lg shadow-lg p-8">
             <h2 className="text-3xl font-semibold text-gray-900 mb-6">
-              What You'll Learn
+              What You&apos;ll Learn
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>

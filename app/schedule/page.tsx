@@ -162,7 +162,7 @@ export default function Schedule() {
                 Ready to Register?
               </h3>
               <p className="text-blue-800 mb-4">
-                To secure your spot in any of our courses, please reach out to us directly. We'll guide you through 
+                To secure your spot in any of our courses, please reach out to us directly. We&apos;ll guide you through 
                 the registration process and answer any questions you may have about the curriculum, schedule, or requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -233,7 +233,7 @@ export default function Schedule() {
                 </h3>
                 <p className="text-gray-700">
                   Experience with PyTorch for deep learning and CUDA for GPU programming will be valuable, 
-                  especially for our advanced courses, but we'll cover these topics as needed.
+                  especially for our advanced courses, but we&apos;ll cover these topics as needed.
                 </p>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function Schedule() {
           
           <div className="mt-8 p-4 bg-gray-50 rounded-lg">
             <p className="text-sm text-gray-600">
-              <strong>Note:</strong> Don't worry if you don't meet all the "helpful" or "great to have" prerequisites. 
+              <strong>Note:</strong> Don&apos;t worry if you don&apos;t meet all the &quot;helpful&quot; or &quot;great to have&quot; prerequisites.
               Our courses are designed to build up your skills progressively, and our instructors provide comprehensive 
               support throughout the learning journey.
             </p>

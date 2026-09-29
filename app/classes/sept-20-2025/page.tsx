@@ -74,7 +74,7 @@ export default function Class20Sept2025() {
         {activeTab === "overview" && (
           <div className="space-y-6">
             <div className="card">
-              <h2 className="text-2xl font-semibold mb-4">Today's Learning Objectives</h2>
+              <h2 className="text-2xl font-semibold mb-4">Today&apos;s Learning Objectives</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-lg font-semibold mb-3 text-[var(--accent)]">Core Concepts</h3>
@@ -127,7 +127,7 @@ export default function Class20Sept2025() {
             <div className="card">
               <h2 className="text-2xl font-semibold mb-4">📊 Class Presentation</h2>
               <p className="text-[var(--muted)] mb-6">
-                Today's slides covering the introduction to agentic design patterns and foundational concepts.
+                Today&apos;s slides covering the introduction to agentic design patterns and foundational concepts.
               </p>
               
               {/* Google Slides Embed */}
@@ -147,9 +147,9 @@ export default function Class20Sept2025() {
                 <h4 className="font-semibold text-blue-900 mb-2">📝 To Use Your Google Slides:</h4>
                 <ol className="text-blue-800 space-y-1 text-sm">
                   <li>1. Open your Google Slides presentation</li>
-                  <li>2. Click "File" → "Share" → "Publish to web"</li>
-                  <li>3. Choose "Embed" and copy the iframe code</li>
-                  <li>4. Replace "YOUR_PRESENTATION_ID" above with your actual presentation ID</li>
+                  <li>2. Click &quot;File&quot; → &quot;Share&quot; → &quot;Publish to web&quot;</li>
+                  <li>3. Choose &quot;Embed&quot; and copy the iframe code</li>
+                  <li>4. Replace &quot;YOUR_PRESENTATION_ID&quot; above with your actual presentation ID</li>
                 </ol>
               </div>
 
@@ -188,7 +188,7 @@ export default function Class20Sept2025() {
             <div className="card">
               <h2 className="text-2xl font-semibold mb-4">📓 Jupyter Notebook</h2>
               <p className="text-[var(--muted)] mb-6">
-                Interactive coding exercises and examples from today's class. Follow along with the code 
+                Interactive coding exercises and examples from today&apos;s class. Follow along with the code 
                 and experiment with the concepts we covered.
               </p>
               
@@ -198,13 +198,13 @@ export default function Class20Sept2025() {
                   <div className="text-6xl mb-4">📓</div>
                   <h3 className="text-2xl font-semibold text-orange-900 mb-3">Interactive Jupyter Notebook</h3>
                   <p className="text-orange-800 mb-6 max-w-2xl mx-auto">
-                    This notebook contains hands-on coding exercises from today's class. Click "Open in Colab" below 
+                    This notebook contains hands-on coding exercises from today&apos;s class. Click &quot;Open in Colab&quot; below 
                     to access the full interactive notebook where you can run and modify code cells.
                   </p>
                   
                   <div className="grid md:grid-cols-2 gap-4 text-left text-sm text-orange-800 mb-6 max-w-2xl mx-auto">
                     <div>
-                      <h4 className="font-semibold mb-2">📚 What's Included:</h4>
+                      <h4 className="font-semibold mb-2">📚 What&apos;s Included:</h4>
                       <ul className="space-y-1">
                         <li>• Setting up your development environment</li>
                         <li>• Building your first simple agent</li>
@@ -277,7 +277,7 @@ export default function Class20Sept2025() {
             <div className="card">
               <h2 className="text-2xl font-semibold mb-4">📝 Knowledge Check Quiz</h2>
               <p className="text-[var(--muted)] mb-6">
-                Test your understanding of today's concepts with this interactive quiz. 
+                Test your understanding of today&apos;s concepts with this interactive quiz. 
                 Take your time and feel free to refer back to the materials.
               </p>
               
@@ -297,10 +297,10 @@ export default function Class20Sept2025() {
                 <h4 className="font-semibold text-purple-900 mb-2">📝 To Use Your Google Forms Quiz:</h4>
                 <ol className="text-purple-800 space-y-1 text-sm">
                   <li>1. Create your quiz in Google Forms</li>
-                  <li>2. Click the "Send" button and select the embed icon (&lt;&gt;)</li>
+                  <li>2. Click the &quot;Send&quot; button and select the embed icon (&lt;&gt;)</li>
                   <li>3. Copy the iframe code</li>
-                  <li>4. Replace "YOUR_FORM_ID" above with your actual form ID</li>
-                  <li>5. Optionally enable "Make this a quiz" for automatic grading</li>
+                  <li>4. Replace &quot;YOUR_FORM_ID&quot; above with your actual form ID</li>
+                  <li>5. Optionally enable &quot;Make this a quiz&quot; for automatic grading</li>
                 </ol>
               </div>
 
@@ -308,10 +308,10 @@ export default function Class20Sept2025() {
                 <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                   <h4 className="font-semibold text-blue-900 mb-2">Quiz Instructions:</h4>
                   <ul className="text-blue-800 space-y-1">
-                    <li>• Take your time - there's no time limit</li>
+                    <li>• Take your time - there&apos;s no time limit</li>
                     <li>• You can retake the quiz as many times as needed</li>
                     <li>• Refer back to the presentation and notebook for help</li>
-                    <li>• Ask questions in the comments if you're stuck</li>
+                    <li>• Ask questions in the comments if you&apos;re stuck</li>
                   </ul>
                 </div>
               </div>
@@ -332,7 +332,7 @@ export default function Class20Sept2025() {
             <div className="card">
               <h2 className="text-2xl font-semibold mb-4">🎥 Class Recording</h2>
               <p className="text-[var(--muted)] mb-6">
-                Full recording of today's class session. Perfect for review or if you missed any part of the live session.
+                Full recording of today&apos;s class session. Perfect for review or if you missed any part of the live session.
               </p>
               
               {/* YouTube Embed */}
@@ -353,9 +353,9 @@ export default function Class20Sept2025() {
                 <h4 className="font-semibold text-red-900 mb-2">🎥 To Use Your YouTube Video:</h4>
                 <ol className="text-red-800 space-y-1 text-sm">
                   <li>1. Upload your class recording to YouTube</li>
-                  <li>2. Set the video privacy to "Unlisted" or "Public"</li>
+                  <li>2. Set the video privacy to &quot;Unlisted&quot; or &quot;Public&quot;</li>
                   <li>3. Copy the video ID from the URL (after /watch?v=)</li>
-                  <li>4. Replace "YOUR_VIDEO_ID" above with your actual video ID</li>
+                  <li>4. Replace &quot;YOUR_VIDEO_ID&quot; above with your actual video ID</li>
                   <li>5. Consider adding timestamps in the video description</li>
                 </ol>
               </div>

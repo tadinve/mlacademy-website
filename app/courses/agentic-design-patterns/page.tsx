@@ -77,7 +77,7 @@ export default function AgenticDesignPatterns() {
       </div>
 
       <div className="card mt-6">
-        <h2 className="text-xl font-semibold mb-4">What You'll Learn</h2>
+        <h2 className="text-xl font-semibold mb-4">What You&apos;ll Learn</h2>
         <div className="grid gap-4 md:grid-cols-2">
           <div>
             <h3 className="text-lg font-semibold mb-2 text-[var(--accent)]">Core Concepts</h3>
