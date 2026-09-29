@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { FeaturedChallenge } from "./components/home/FeaturedChallenge";
 import { TrackedResourceLink } from "./components/home/TrackedResourceLink";
 import {
@@ -10,19 +11,20 @@ import {
   learningPaths,
 } from "./components/home/homepageContent";
 import { getPracticeChallengeBySlug } from "../lib/practiceChallenges";
+import { siteUrl } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "Agentic Architect Lab by MLacademy",
   description:
     "Practice architecture decisions, study real agent patterns, and learn how to build secure, reliable AI systems.",
   alternates: {
-    canonical: "/",
+    canonical: siteUrl('/'),
   },
   openGraph: {
     title: "Agentic Architect Lab by MLacademy",
     description:
       "Build the judgment behind production AI agents with practical challenges and guided learning resources.",
-    url: "https://mlacademy.io/",
+    url: siteUrl('/'),
     siteName: "MLacademy",
     type: "website",
     images: [
@@ -71,18 +73,18 @@ export default function Home() {
             reliable systems.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a
+            <Link
               className="inline-flex items-center justify-center rounded-xl bg-sky-400 px-5 py-3 text-base font-semibold text-slate-950 transition-transform hover:-translate-y-0.5 hover:bg-sky-300 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-slate-950"
               href="/#featured-challenge"
             >
               Try a free challenge
-            </a>
-            <a
+            </Link>
+            <Link
               className="inline-flex items-center justify-center rounded-xl border border-slate-600 px-5 py-3 text-base font-semibold text-slate-100 transition-colors hover:border-sky-300 hover:text-sky-100 focus:outline-none focus:ring-2 focus:ring-sky-200 focus:ring-offset-2 focus:ring-offset-slate-950"
               href="/#featured-resources"
             >
               Explore learning resources
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -141,12 +143,12 @@ export default function Home() {
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-200">{path.kicker}</p>
               <h3 className="mt-4 text-2xl font-semibold text-white">{path.title}</h3>
               <p className="mt-4 text-sm leading-7 text-slate-300 md:text-base">{path.description}</p>
-              <a
+              <Link
                 className="mt-6 inline-flex items-center text-sm font-semibold text-sky-200 hover:text-sky-100"
                 href={path.href}
               >
                 {path.cta}
-              </a>
+              </Link>
             </article>
           ))}
         </div>
@@ -272,7 +274,7 @@ export default function Home() {
         </div>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           {closingCtas.map((cta) => (
-            <a
+            <Link
               key={cta.title}
               href={cta.href}
               className={cta.primary
@@ -281,7 +283,7 @@ export default function Home() {
               }
             >
               {cta.title}
-            </a>
+            </Link>
           ))}
         </div>
       </section>
@@ -307,10 +309,10 @@ export default function Home() {
             </p>
           </div>
           <nav className="flex flex-wrap gap-4 text-sm font-semibold text-slate-200">
-            <a href="/#featured-challenge" className="hover:text-sky-100">Practice</a>
-            <a href="/#learning-paths" className="hover:text-sky-100">Learn</a>
-            <a href="/courses" className="hover:text-sky-100">Courses</a>
-            <a href="/about" className="hover:text-sky-100">About</a>
+            <Link href="/practice" className="hover:text-sky-100">Practice</Link>
+            <Link href="/#learning-paths" className="hover:text-sky-100">Learn</Link>
+            <Link href="/courses" className="hover:text-sky-100">Courses</Link>
+            <Link href="/about" className="hover:text-sky-100">About</Link>
           </nav>
         </div>
       </footer>

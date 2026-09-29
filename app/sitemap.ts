@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { practiceChallenges } from '../lib/practiceChallenges';
+import { siteUrl } from '../lib/site';
 
 const routes = [
   '/',
@@ -21,7 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
   return routes.map((route) => ({
-    url: `https://mlacademy.io${route}`,
+    url: siteUrl(route),
     lastModified,
   }));
 }

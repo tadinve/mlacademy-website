@@ -3,11 +3,12 @@ import type { Metadata } from "next";
 import Navbar from "./components/Navbar";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { SITE_ORIGIN } from "../lib/site";
 
 export const metadata: Metadata = {
   title: "MLacademy",
   description: "Practical resources for designing, debugging, securing, and deploying AI agents.",
-  metadataBase: new URL("https://mlacademy.io"),
+  metadataBase: new URL(SITE_ORIGIN),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

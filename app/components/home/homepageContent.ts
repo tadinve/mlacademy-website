@@ -43,9 +43,9 @@ export const learningPaths: LearningPath[] = [
     kicker: "Architecture practice",
     title: "Practice architecture decisions.",
     description:
-      "Work through realistic tradeoffs around tool access, approval flows, and system boundaries using the featured challenge and guided materials.",
-    href: "/#featured-challenge",
-    cta: "Practice on the homepage",
+      "Compare realistic tradeoffs across approvals, retries, tool usage, and shared-state scenarios in the practice collection.",
+    href: "/practice",
+    cta: "Explore practice challenges",
   },
   {
     kicker: "Build and debug",

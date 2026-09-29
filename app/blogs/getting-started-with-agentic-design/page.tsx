@@ -1,13 +1,18 @@
 import { Metadata } from "next";
 import DisqusComments from "../../components/DisqusComments";
+import { siteUrl } from "../../../lib/site";
 
 export const metadata: Metadata = {
   title: "Getting Started with Agentic Design - ML Academy",
   description: "Learn the fundamental principles of designing intelligent agentic systems. Master autonomous AI agents, multi-agent architectures, and agentic workflows in this comprehensive guide.",
   keywords: "agentic design, AI agents, autonomous systems, multi-agent architecture, intelligent agents, agentic AI, machine learning, artificial intelligence, agent-based systems",
+  alternates: {
+    canonical: siteUrl('/blogs/getting-started-with-agentic-design'),
+  },
   openGraph: {
     title: "Getting Started with Agentic Design - ML Academy",
     description: "Learn the fundamental principles of designing intelligent agentic systems. Master autonomous AI agents, multi-agent architectures, and agentic workflows.",
+    url: siteUrl('/blogs/getting-started-with-agentic-design'),
     type: "article",
     publishedTime: "2025-08-19T00:00:00.000Z",
     authors: ["Venkatesh Tadinada"],

@@ -7,6 +7,7 @@ import {
   getPracticeChallengeIndex,
   practiceChallenges,
 } from '../../../lib/practiceChallenges';
+import { siteUrl } from '../../../lib/site';
 
 type PracticeChallengePageProps = {
   params: {
@@ -29,7 +30,14 @@ export function generateMetadata({ params }: PracticeChallengePageProps): Metada
     title: `${challenge.title} | Agentic Architect Lab by MLacademy`,
     description: challenge.description,
     alternates: {
-      canonical: `/practice/${challenge.slug}`,
+      canonical: siteUrl(`/practice/${challenge.slug}`),
+    },
+    openGraph: {
+      title: `${challenge.title} | Agentic Architect Lab by MLacademy`,
+      description: challenge.description,
+      url: siteUrl(`/practice/${challenge.slug}`),
+      siteName: 'MLacademy',
+      type: 'website',
     },
   };
 }
