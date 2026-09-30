@@ -29,7 +29,7 @@ export default function Class24Sept2025() {
           <div className="mt-4 md:mt-0">
             <Link 
               className="btn !bg-green-600 hover:!bg-green-700 !text-white font-semibold px-6 py-3"
-              href="/schedule"
+              href="/register"
             >
               🚀 Register for Future Classes
             </Link>
@@ -246,15 +246,15 @@ export default function Class24Sept2025() {
             ← Previous Class
           </Link>
           <div className="text-center">
-            <p className="text-[var(--muted)] mb-2">Next Class</p>
-            <p className="font-semibold">October 6, 2025</p>
-            <p className="text-sm text-[var(--muted)]">Advanced Patterns</p>
+            <p className="text-[var(--muted)] mb-2">Archive</p>
+            <p className="font-semibold">Past Classes</p>
+            <p className="text-sm text-[var(--muted)]">Browse published materials</p>
           </div>
           <Link 
-            href="/schedule"
+            href="/past-classes"
             className="btn bg-[var(--accent)] text-[#0b0f17] hover:bg-[var(--accent)]/90"
           >
-            Next Class →
+            Open Archive →
           </Link>
         </div>
       </div>

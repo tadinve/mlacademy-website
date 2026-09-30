@@ -69,7 +69,7 @@ export default function Courses() {
           <div className="flex space-x-3">
             <Link 
               className="btn !bg-green-600 hover:!bg-green-700 !text-white" 
-              href="/schedule"
+              href="/register"
             >
               Register Now
             </Link>

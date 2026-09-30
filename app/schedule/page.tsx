@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { currentRegistrationUrl } from "../../lib/registration";
 
 export const metadata: Metadata = {
   title: "Course Schedule - ML Academy",
@@ -129,7 +130,7 @@ export default function Schedule() {
                     <td className="px-6 py-4 whitespace-nowrap">
                       {course.status === "Open for Registration" ? (
                         <Link 
-                          href="https://gdg.community.dev/events/details/google-gdg-cloud-san-jose-presents-learn-to-build-ai-agents/"
+                          href={currentRegistrationUrl}
                           className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors inline-block"
                           target="_blank"
                           rel="noopener noreferrer"

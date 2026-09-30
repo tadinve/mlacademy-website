@@ -29,7 +29,7 @@ export default function Class20Sept2025() {
           <div className="mt-4 md:mt-0">
             <Link 
               className="btn !bg-green-600 hover:!bg-green-700 !text-white font-semibold px-6 py-3"
-              href="/schedule"
+              href="/register"
             >
               🚀 Register for Future Classes
             </Link>
@@ -413,11 +413,11 @@ export default function Class20Sept2025() {
           </Link>
           <div className="text-center">
             <p className="text-[var(--muted)] mb-2">Next Class</p>
-            <p className="font-semibold">September 27, 2025</p>
-            <p className="text-sm text-[var(--muted)]">Tool Use Patterns</p>
+            <p className="font-semibold">September 22, 2025</p>
+            <p className="text-sm text-[var(--muted)]">Prompt Chaining for Agentic Design</p>
           </div>
           <Link 
-            href="/classes/sept-27-2025"
+            href="/classes/sept-22-2025"
             className="btn bg-[var(--accent)] text-[#0b0f17] hover:bg-[var(--accent)]/90"
           >
             Next Class →
