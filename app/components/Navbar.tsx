@@ -23,8 +23,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Link href="/" prefetch={false} className="flex items-center gap-3 hover:opacity-90 transition-opacity">
+          <div className="min-w-0">
+            <Link href="/" prefetch={false} className="flex min-w-0 items-center gap-3 hover:opacity-90 transition-opacity">
               <Image
                 src="/images/logo/MLA-logo.png"
                 alt="ML Academy"
@@ -35,22 +35,23 @@ export default function Navbar() {
                 className="h-11 w-auto brightness-0 invert"
                 priority
               />
-              <div className="hidden sm:block">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200">MLacademy</p>
-                <p className="text-sm font-semibold text-white">Agentic Architect Lab</p>
+              <div className="min-w-0 flex items-center">
+                <p className="truncate text-base font-bold leading-tight tracking-tight text-white sm:text-[1.8rem] sm:leading-none md:text-base lg:text-[2rem]">
+                  Agentic Architect Lab
+                </p>
               </div>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex md:items-center md:gap-3">
-            <div className="ml-10 flex items-baseline space-x-2">
+            <div className="ml-4 flex items-baseline space-x-1 lg:ml-10 lg:space-x-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
                   prefetch={false}
-                  className="rounded-lg px-3 py-2 text-base font-medium text-slate-200 transition-colors hover:text-sky-100"
+                  className="rounded-lg px-2 py-2 text-base font-medium text-slate-200 lg:px-3 transition-colors hover:text-sky-100"
                 >
                   {link.label}
                 </Link>
@@ -59,7 +60,7 @@ export default function Navbar() {
             <Link
               href="/#featured-challenge"
               prefetch={false}
-              className="inline-flex items-center rounded-xl bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 transition-colors hover:bg-sky-300"
+              className="inline-flex items-center whitespace-nowrap rounded-xl bg-sky-400 px-4 py-2 text-sm font-semibold text-slate-950 transition-colors hover:bg-sky-300"
             >
               Try a challenge
             </Link>
