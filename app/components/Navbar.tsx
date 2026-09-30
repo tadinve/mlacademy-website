@@ -19,7 +19,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 z-50 border-b border-white/10 bg-[#081120]/90 shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-sm">
+    <nav className="fixed inset-x-0 top-0 z-[100] border-b border-white/10 bg-[rgba(8,17,32,0.82)] shadow-[0_12px_40px_rgba(0,0,0,0.28)] backdrop-blur-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
@@ -101,7 +101,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       <div id="mobile-menu" className={`${isMenuOpen ? 'block mobile-menu' : 'hidden'} md:hidden`}>
-        <div className="space-y-1 border-t border-white/10 bg-[#081120] px-3 pb-4 pt-3">
+        <div className="space-y-1 border-t border-white/10 bg-[rgba(8,17,32,0.94)] px-3 pb-4 pt-3 backdrop-blur-md">
           {navLinks.map((link) => (
             <Link
               key={link.label}

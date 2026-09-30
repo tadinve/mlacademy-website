@@ -31,7 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <Navbar />
-        <div className="container">{children}</div>
+        <div className="site-content">
+          <div className="container">{children}</div>
+        </div>
         <Analytics />
       </body>
     </html>

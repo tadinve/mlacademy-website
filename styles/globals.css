@@ -8,6 +8,8 @@
   --muted: #91a3b0;
   --text: #e6eef5;
   --accent: #76a9fa;
+  --navbar-height: 5rem;
+  --anchor-offset: 7rem;
 }
 
 html, body {
@@ -16,7 +18,7 @@ html, body {
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 7rem;
+  scroll-padding-top: var(--anchor-offset);
 }
 
 body {
@@ -24,6 +26,10 @@ body {
               radial-gradient(800px 400px at 80% 0%, #0e1421, transparent 70%),
               var(--bg);
   color: var(--text);
+}
+
+.site-content {
+  padding-top: var(--navbar-height);
 }
 
 a { color: var(--accent); }
@@ -52,8 +58,8 @@ a:hover { text-decoration: underline; }
   font-weight: 600;
 }
 
-main section[id] {
-  scroll-margin-top: 7rem;
+main [id] {
+  scroll-margin-top: var(--anchor-offset);
 }
 
 /* Additional navbar styles */
