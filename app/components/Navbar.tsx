@@ -36,7 +36,7 @@ export default function Navbar() {
                 priority
               />
               <div className="min-w-0 flex items-center">
-                <p className="truncate text-base font-bold leading-tight tracking-tight text-white sm:text-[1.8rem] sm:leading-none md:text-base lg:text-[2rem]">
+                <p className="truncate text-base font-bold leading-tight tracking-tight text-white sm:text-[1.8rem] sm:leading-tight md:text-base lg:text-[2rem]">
                   Agentic Architect Lab
                 </p>
               </div>
