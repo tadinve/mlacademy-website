@@ -14,31 +14,31 @@ import { getPracticeChallengeBySlug } from "../lib/practiceChallenges";
 import { siteUrl } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "Agentic Architect Lab by MLacademy",
+  title: "Agentic Architect Lab by ML Academy",
   description:
     "Practice architecture decisions, study real agent patterns, and learn how to build secure, reliable AI systems.",
   alternates: {
     canonical: siteUrl('/'),
   },
   openGraph: {
-    title: "Agentic Architect Lab by MLacademy",
+    title: "Agentic Architect Lab by ML Academy",
     description:
       "Build the judgment behind production AI agents with practical challenges and guided learning resources.",
     url: siteUrl('/'),
-    siteName: "MLacademy",
+    siteName: "ML Academy",
     type: "website",
     images: [
       {
         url: "/images/banners/growtika-nGoCBxiaRO0-unsplash.jpg",
         width: 2048,
         height: 1365,
-        alt: "Abstract neural network illustration for Agentic Architect Lab by MLacademy",
+        alt: "Abstract neural network illustration for Agentic Architect Lab by ML Academy",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agentic Architect Lab by MLacademy",
+    title: "Agentic Architect Lab by ML Academy",
     description:
       "Build the judgment behind production AI agents with practical challenges and guided learning resources.",
     images: ["/images/banners/growtika-nGoCBxiaRO0-unsplash.jpg"],
@@ -63,7 +63,7 @@ export default function Home() {
       <section className="mb-8 grid gap-6 overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(13,25,47,0.96),rgba(10,16,31,0.92))] p-8 shadow-[0_24px_80px_rgba(0,0,0,0.35)] lg:grid-cols-[1.15fr_0.85fr] lg:p-10">
         <div className="relative z-10 max-w-2xl">
           <p className="mb-4 inline-flex rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-2 text-sm font-medium text-sky-100">
-            Agentic Architect Lab by MLacademy
+            Agentic Architect Lab by ML Academy
           </p>
           <h1 className="max-w-3xl text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
             Build the judgment behind production AI agents.
@@ -205,7 +205,7 @@ export default function Home() {
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-sky-200">Instructor</p>
           <h2 className="mt-3 text-3xl font-semibold text-white md:text-4xl">Learn with Venkatesh Tadinada.</h2>
           <p className="mt-4 max-w-2xl text-base leading-8 text-slate-300 md:text-lg">
-            Agentic Architect Lab draws from MLacademy&apos;s existing instruction and public materials to help developers and
+            Agentic Architect Lab draws from ML Academy&apos;s existing instruction and public materials to help developers and
             cloud architects build better judgment around real system decisions.
           </p>
           <ul className="mt-8 space-y-4">
@@ -291,9 +291,9 @@ export default function Home() {
       <footer className="mt-16 border-t border-white/10 pt-8">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-lg font-semibold text-white">Agentic Architect Lab by MLacademy</p>
+            <p className="text-lg font-semibold text-white">Agentic Architect Lab by ML Academy</p>
             <p className="mt-3 text-sm leading-7 text-slate-300 md:text-base">
-              MLacademy&apos;s practical home for architecture challenges, guided learning, and scenario-based agent systems study.
+              ML Academy&apos;s practical home for architecture challenges, guided learning, and scenario-based agent systems study.
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-300 md:text-base">
               For enterprise consulting and training, visit{" "}

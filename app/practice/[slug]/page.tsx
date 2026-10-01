@@ -27,16 +27,16 @@ export function generateMetadata({ params }: PracticeChallengePageProps): Metada
   }
 
   return {
-    title: `${challenge.title} | Agentic Architect Lab by MLacademy`,
+    title: `${challenge.title} | Agentic Architect Lab by ML Academy`,
     description: challenge.description,
     alternates: {
       canonical: siteUrl(`/practice/${challenge.slug}`),
     },
     openGraph: {
-      title: `${challenge.title} | Agentic Architect Lab by MLacademy`,
+      title: `${challenge.title} | Agentic Architect Lab by ML Academy`,
       description: challenge.description,
       url: siteUrl(`/practice/${challenge.slug}`),
-      siteName: 'MLacademy',
+      siteName: 'ML Academy',
       type: 'website',
     },
   };

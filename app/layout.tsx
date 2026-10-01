@@ -6,7 +6,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SITE_ORIGIN } from "../lib/site";
 
 export const metadata: Metadata = {
-  title: "MLacademy",
+  title: "ML Academy",
   description: "Practical resources for designing, debugging, securing, and deploying AI agents.",
   metadataBase: new URL(SITE_ORIGIN),
 };

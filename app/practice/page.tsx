@@ -4,18 +4,18 @@ import { practiceChallenges } from '../../lib/practiceChallenges';
 import { siteUrl } from '../../lib/site';
 
 export const metadata: Metadata = {
-  title: 'Practice Challenges | Agentic Architect Lab by MLacademy',
+  title: 'Practice Challenges | Agentic Architect Lab by ML Academy',
   description:
     'Work through five original scenario-based architecture challenges on tool safety, retries, shared state, authorization, and idempotency.',
   alternates: {
     canonical: siteUrl('/practice'),
   },
   openGraph: {
-    title: 'Practice Challenges | Agentic Architect Lab by MLacademy',
+    title: 'Practice Challenges | Agentic Architect Lab by ML Academy',
     description:
       'Work through five original scenario-based architecture challenges on tool safety, retries, shared state, authorization, and idempotency.',
     url: siteUrl('/practice'),
-    siteName: 'MLacademy',
+    siteName: 'ML Academy',
     type: 'website',
   },
 };
